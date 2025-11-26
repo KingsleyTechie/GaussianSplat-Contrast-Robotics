@@ -1,0 +1,15 @@
+```
+# Pretraining configuration
+data_root: ./data
+scene_list: ./data/scene_list_pretrain.txt
+output_root: ./outputs/pretrain
+gpu: 0
+batch_size_descriptors: 512
+memory_bank_size: 100000
+embedding_dim: 256
+temperature: 0.1
+lr: 1e-4
+weight_decay: 1e-2
+epochs: 100
+save_every: 5
+```
