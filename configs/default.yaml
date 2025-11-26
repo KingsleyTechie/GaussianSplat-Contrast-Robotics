@@ -1,0 +1,10 @@
+```
+data_root: ./data
+scene_list: ./data/scene_list.txt
+output_root: ./outputs
+gpu: 0
+num_workers: 8
+splat_init:
+num_init_points: 200000
+prune_threshold: 0.01
+```
