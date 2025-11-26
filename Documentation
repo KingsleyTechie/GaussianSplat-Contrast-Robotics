@@ -1,0 +1,49 @@
+# GaussianSplat Contrast Repo
+
+
+This repository contains a full working implementation for the GaussianSplat Contrast pipeline described in the paper "Contrastive 3D Scene Understanding with Gaussian Splatting for Robust Robotics Perception". I built this repository to demonstrate the experiments and results described in the manuscript. The codebase is organized to support end to end training starting from multi view captures through Gaussian splatting reconstruction, per splat descriptor extraction, contrastive pretraining, few shot fine tuning, and evaluation.
+
+
+I designed the codebase to be runnable on a standard research workstation equipped with one or two GPUs. Where heavy computation is required such as Gaussian splatting reconstruction, I rely on the official 3D Gaussian Splatting implementation as a dependency and provide a wrapper to integrate it into the pipeline.
+
+
+The repository content below is complete with scripts, modules, configuration examples, and a README describing setup and commands required to reproduce the experiments. All source files are included in this single code document for convenience. Copy the files to the same structure in a git repository before pushing to your remote.
+
+
+Repository tree
+
+
+```
+GaussianSplat-Contrast-Robotics/
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── setup_env.sh
+├── configs/
+│ ├── default.yaml
+│ ├── pretrain.yaml
+│ └── finetune.yaml
+├── data/
+│ └── README_DATA.md
+├── scripts/
+│ ├── run_preprocess.sh
+│ ├── run_reconstruct.sh
+│ ├── run_pretrain.sh
+│ ├── run_finetune.sh
+│ └── run_eval.sh
+├── src/
+│ ├── __init__.py
+│ ├── data_prep.py
+│ ├── splat_wrapper.py
+│ ├── descriptor_extractor.py
+│ ├── models.py
+│ ├── contrastive_train.py
+│ ├── finetune.py
+│ ├── evaluate.py
+│ └── utils.py
+├── notebooks/
+│ ├── demo_inference.ipynb
+│ └── viz_results.ipynb
+└── pretrained/
+└── README_PRETRAINED.md
+```
