@@ -1,0 +1,22 @@
+# Core
+numpy
+scipy
+torch>=1.12
+torchvision
+pillow
+tqdm
+pyyaml
+matplotlib
+scikit learn
+open3d
+imageio
+opencv python
+
+
+# Optional and utilities
+tensorboard
+pandas
+seaborn
+
+
+# The 3D Gaussian Splatting implementation depends on specific packages and will be installed separately
